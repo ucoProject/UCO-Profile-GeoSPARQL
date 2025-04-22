@@ -1,4 +1,4 @@
-[submodule "dependencies/UCO"]
-	path = dependencies/UCO
-	url = https://github.com/ucoProject/UCO.git
-	branch = master
+[submodule "dependencies/CDO-Shapes-GeoSPARQL"]
+	path = dependencies/CDO-Shapes-GeoSPARQL
+	url = https://github.com/Cyber-Domain-Ontology/CDO-Shapes-GeoSPARQL.git
+	branch = main

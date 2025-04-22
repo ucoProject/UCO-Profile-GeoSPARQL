@@ -1,20 +1,30 @@
-# imports: http://example.org/ontology/uco-example
+# imports: http://example.org/ontology/uco-geo
 
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix uco-location: <https://ontology.unifiedcyberontology.org/uco/location/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/kb>
 	a owl:Ontology ;
 	rdfs:comment "This knowledge base instantiates each of the mapped classes and properties, so SHACL shapes can perform a review for inconsistencies in the mapping between UCO and the mapped ontology."@en ;
-	owl:imports <http://example.org/ontology/uco-example> ;
+	owl:imports <http://example.org/ontology/uco-geo> ;
 	.
 
-kb:UcoObject-24cf6699-3cb6-47fa-9f62-c972b0971752
-	a uco-core:UcoObject ;
+kb:Device-90448bb3-0921-4b74-87ba-19044f0518ef
+	a uco-observable:Device ;
+	.
+
+kb:Location-776426f4-b39e-4a7e-aceb-59fe69a0ca0f
+	a uco-location:Location ;
+	.
+
+kb:Person-da1c0374-12f0-40d1-9ddd-8c9d90c6b3bf
+	a uco-identity:Person ;
 	.
 

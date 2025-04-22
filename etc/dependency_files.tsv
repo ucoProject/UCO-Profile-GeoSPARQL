@@ -1,2 +1,3 @@
-http://example.org/ontology/example/0.0.1	${top_srcdir}/dependencies/example.ttl
-http://example.org/shapes/example	${top_srcdir}/shapes/sh-example.ttl
+http://example.org/shapes/sh-geo	${top_srcdir}/dependencies/CDO-Shapes-GeoSPARQL/shapes/sh-geo.ttl
+http://example.org/shapes/sh-uco-geo	${top_srcdir}/shapes/sh-uco-geo.ttl
+http://www.opengis.net/ont/geosparql/1.1	${top_srcdir}/dependencies/CDO-Shapes-GeoSPARQL/dependencies/geo.ttl

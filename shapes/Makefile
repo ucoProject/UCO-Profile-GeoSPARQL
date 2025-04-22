@@ -18,7 +18,7 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd .. ; pwd)
 
-uco_srcdir := $(top_srcdir)/dependencies/UCO
+uco_srcdir := $(top_srcdir)/dependencies/CDO-Shapes-GeoSPARQL/dependencies/UCO
 
 test_pys := $(wildcard test_*.py)
 

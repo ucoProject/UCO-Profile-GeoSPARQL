@@ -1,8 +1,8 @@
-# UCO Profile: Example
+# UCO Profile: GeoSPARQL
 
 ![Repository Status](https://img.shields.io/badge/-exploratory-informational)
 
-This repository explores UCO under a usage profile assuming adoption of [Example](http://example.org/ontology).
+This repository explores UCO under a usage profile assuming adoption of [GeoSPARQL](https://github.com/opengeospatial/ogc-geosparql).
 
 The CDO Profile development rationale and design is [here](https://cyberdomainontology.org/ontology/development/#profiles).
 
