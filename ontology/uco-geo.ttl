@@ -1,5 +1,5 @@
 # imports: http://www.opengis.net/ont/geosparql/1.1
-# imports: https://ontology.unifiedcyberontology.org/uco/uco/1.3.0
+# imports: https://ontology.unifiedcyberontology.org/uco/uco/1.4.0
 
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
@@ -15,7 +15,7 @@
 	a owl:Ontology ;
 	owl:imports
 		<http://www.opengis.net/ont/geosparql/1.1> ,
-		<https://ontology.unifiedcyberontology.org/uco/uco/1.3.0>
+		<https://ontology.unifiedcyberontology.org/uco/uco/1.4.0>
 		;
 	.
 
