@@ -26,6 +26,7 @@ test_pys := $(wildcard test_*.py)
 # by owl:imports, including UCO.  Non-shapes graphs are delegated to
 # ../ontology/generated-dependencies.ttl.
 generated_dependencies_ttls := \
+  $(top_srcdir)/dependencies/CDO-Shapes-GeoSPARQL/dependencies/formatted-validator.ttl \
   $(top_srcdir)/dependencies/CDO-Shapes-GeoSPARQL/shapes/sh-geo.ttl \
   $(uco_srcdir)/tests/uco_monolithic.ttl
 
