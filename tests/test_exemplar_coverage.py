@@ -40,20 +40,16 @@ def test_exemplar_coverage() -> None:
     tbox_graph = Graph()
     combined_graph = Graph()
 
-    for filepath in (top_srcdir / "ontology").iterdir():
-        if filepath.name.startswith("_"):
-            # Skip temporary build artifacts.
-            continue
-        if filepath.name.startswith("."):
-            # Skip quality control test artifacts.
-            continue
-        if filepath.name.endswith(".ttl"):
-            logging.debug("Loading profile graph %r.", filepath)
-            profile_graph.parse(filepath)
-    logging.debug("len(profile_graph) = %d.", len(profile_graph))
+    ontology_filepath = top_srcdir / "ontology" / "generated-ontology.ttl"
+    local_shapes_filepath = top_srcdir / "shapes" / "generated-local.ttl"
 
-    monolithic_filepath = srcdir / "monolithic.ttl"
-    tbox_graph.parse(monolithic_filepath)
+    # The transitive import closure of the ontology graph is brought in
+    # for subclass and subproperty entailment.  But, only shapes locally
+    # defined in this repository are checked for review-subjects.
+    # (Else, each dependent shapes graphs would also incur review-
+    # subject needs.)
+    tbox_graph.parse(ontology_filepath)
+    tbox_graph.parse(local_shapes_filepath)
 
     exemplar_filepath = srcdir / "exemplars.ttl"
     logging.debug("Loading exemplars graph %r.", exemplar_filepath)
