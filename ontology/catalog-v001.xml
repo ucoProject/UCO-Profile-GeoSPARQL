@@ -38,7 +38,7 @@
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-GeoSPARQL/dependencies/UCO/ontology/uco/victim/victim.ttl" name="https://ontology.unifiedcyberontology.org/uco/victim/1.4.0"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-GeoSPARQL/dependencies/UCO/ontology/uco/vocabulary/vocabulary.ttl" name="https://ontology.unifiedcyberontology.org/uco/vocabulary"/>
     <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-GeoSPARQL/dependencies/UCO/ontology/uco/vocabulary/vocabulary.ttl" name="https://ontology.unifiedcyberontology.org/uco/vocabulary/1.4.0"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-GeoSPARQL/dependencies/geo.ttl" name="http://www.opengis.net/ont/geosparql"/>
-    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-GeoSPARQL/dependencies/geo.ttl" name="http://www.opengis.net/ont/geosparql/1.1"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-GeoSPARQL/dependencies/formatted-geo.ttl" name="http://www.opengis.net/ont/geosparql"/>
+    <uri id="User Entered Import Resolution" uri="../dependencies/CDO-Shapes-GeoSPARQL/dependencies/formatted-geo.ttl" name="http://www.opengis.net/ont/geosparql/1.1"/>
     <uri id="User Entered Import Resolution" uri="uco-geo.ttl" name="http://example.org/ontology/uco-geo"/>
 </catalog>
