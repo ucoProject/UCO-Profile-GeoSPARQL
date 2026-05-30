@@ -22,10 +22,6 @@ uco_srcdir := $(top_srcdir)/dependencies/CDO-Shapes-GeoSPARQL/dependencies/UCO
 
 test_pys := $(wildcard test_*.py)
 
-profile_ttls := $(wildcard $(top_srcdir)/ontology/uco-*.ttl)
-
-shape_ttls := $(wildcard $(top_srcdir)/shapes/sh-*.ttl)
-
 all: \
   generated-exemplars-expanded.ttl
 
@@ -42,6 +38,7 @@ all: \
 
 .pytest.done.log: \
   $(test_pys) \
+  $(top_srcdir)/ontology/generated-local.ttl \
   $(top_srcdir)/ontology/generated-ontology.ttl \
   exemplars.ttl
 	source $(top_srcdir)/venv/bin/activate \
@@ -50,6 +47,7 @@ all: \
 	touch $@
 
 check: \
+  generated-monolithic.ttl \
   .pytest.done.log \
   .pyshacl.done.log
 
@@ -82,17 +80,17 @@ generated-exemplars-expanded.ttl: \
 	    > _$@
 	mv _$@ $@
 
-monolithic.ttl: \
+# Cross-review OWL and SHACL specifications together.
+generated-monolithic.ttl: \
   $(top_srcdir)/.venv.done.log \
-  $(profile_ttls) \
-  $(shape_ttls)
+  $(top_srcdir)/ontology/generated-ontology.ttl \
+  $(top_srcdir)/shapes/generated-shapes.ttl \
+  $(uco_srcdir)/ontology/owl/owl.ttl
 	source $(top_srcdir)/venv/bin/activate \
 	  && rdfpipe \
 	    --output-format turtle \
-	    $(top_srcdir)/dependencies/imports-transitive.ttl \
-	    $(profile_ttls) \
-	    $(shape_ttls) \
-	    $(uco_srcdir)/tests/uco_monolithic.ttl \
+	    $(top_srcdir)/ontology/generated-ontology.ttl \
+	    $(top_srcdir)/shapes/generated-shapes.ttl \
 	    > _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && pyshacl \
